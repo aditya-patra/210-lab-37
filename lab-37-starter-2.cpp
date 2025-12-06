@@ -28,6 +28,10 @@ int main() {
         hash_table.insert(make_pair(gen_hash_index(line), temp));
     }
 
+    for (const auto& pair : hash_table) {
+        cout << pair.first << pair.second();
+    }
+
     return 0;
 }
 
