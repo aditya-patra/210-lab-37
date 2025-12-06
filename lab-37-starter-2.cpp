@@ -1,8 +1,10 @@
 #include <iostream>
 #include <fstream>
+#include <map>
+#include <list>
 using namespace std;
 
-int sum_ascii(string key);
+int gen_hash_index(string key);
 
 
 int main() {
@@ -12,23 +14,25 @@ int main() {
     int b = 66;
     cout << b << endl;
     cout << (char) b << endl;
-    // check sum_ascii
-    cout << sum_ascii("bob") << endl;
-    cout << sum_ascii("110") << endl;
+    // check gen_hash_index
+    cout << gen_hash_index("bob") << endl;
+    cout << gen_hash_index("110") << endl;
 
     ifstream file("lab-37-data-2.txt");  
 
     string line;
     int sum = 0;
     while (getline(file, line)) {
-        sum += sum_ascii(line);
+        sum += gen_hash_index(line);
     }
     cout << sum;
+
+    map<int, list<int>> hash_table; 
 
     return 0;
 }
 
-int sum_ascii(string key) {
+int gen_hash_index(string key) {
     int sum = 0;
     for(char val: key) {
         sum += (int) val;
