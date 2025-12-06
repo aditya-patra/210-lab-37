@@ -19,8 +19,8 @@ int main() {
     ifstream file("lab-37-data-2.txt");
 
     string line;
-    while (getline(line, file)) {
-        cout line;
+    while (getline(file, line)) {
+        cout << line; 
     }
 
     return 0;
