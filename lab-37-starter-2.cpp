@@ -16,6 +16,14 @@ int main() {
     return 0;
 }
 
+int sum_ascii(string key) {
+    int sum = 0;
+    for(char val: key) {
+        sum += val;
+    }
+    return sum
+}
+
 /* 
 These targets are present in the dataset and can be used for testing:
 536B9DFC93AF
