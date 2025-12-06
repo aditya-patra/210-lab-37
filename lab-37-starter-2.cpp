@@ -28,9 +28,13 @@ int main() {
             list<string> temp;
             temp.push_back(line);
             hash_table.insert(make_pair(gen_hash_index(line), temp));
-        }   
+        }
+        else {
+            it->second.push_front(line);
+        }
     }
 
+    
     for (const auto& pair : hash_table) {
         cout << pair.first;
         for (auto i = pair.second.begin(); i != pair.second.end(); i++) {
