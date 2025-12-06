@@ -23,7 +23,7 @@ int sum_ascii(string key) {
     for(char val: key) {
         sum += (int) val;
     }
-    return sum;
+    return sum; 
 }
 
 /* 
