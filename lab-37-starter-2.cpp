@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int sum_ascii(string key);
+
 
 int main() {
     char a = 'A';
