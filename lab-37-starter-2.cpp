@@ -31,7 +31,7 @@ int main() {
     for (const auto& pair : hash_table) {
         cout << pair.first;
         for (auto i = pair.second.begin(); i != pair.second.end(); i++) {
-            cout << *i << endl;
+            cout << *i << endl; 
         }
     }
 
