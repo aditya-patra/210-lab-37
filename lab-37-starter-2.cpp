@@ -21,13 +21,12 @@ int main() {
     ifstream file("lab-37-data-2.txt");  
 
     string line;
-    int sum = 0;
+    map<int, list<string>> hash_table; 
     while (getline(file, line)) {
-        sum += gen_hash_index(line);
+        list<string> temp;
+        temp.push_back(line);
+        hash_table.insert(make_pair(gen_hash_index(line), temp));
     }
-    cout << sum;
-
-    map<int, list<int>> hash_table; 
 
     return 0;
 }
