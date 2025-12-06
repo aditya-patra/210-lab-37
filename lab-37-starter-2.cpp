@@ -21,7 +21,7 @@ int main() {
 int sum_ascii(string key) {
     int sum = 0;
     for(char val: key) {
-        sum += val;
+        sum += (int) val;
     }
     return sum;
 }
