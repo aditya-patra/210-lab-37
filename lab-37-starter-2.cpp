@@ -23,9 +23,12 @@ int main() {
     string line;
     map<int, list<string>> hash_table; 
     while (getline(file, line)) {
-        list<string> temp;
-        temp.push_back(line);
-        hash_table.insert(make_pair(gen_hash_index(line), temp));
+        auto it = hash_table.find(gen_hash_index(line));
+        if (it == hash_table.end()) {
+            list<string> temp;
+            temp.push_back(line);
+            hash_table.insert(make_pair(gen_hash_index(line), temp));
+        }   
     }
 
     for (const auto& pair : hash_table) {
