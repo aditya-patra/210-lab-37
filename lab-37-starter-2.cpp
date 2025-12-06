@@ -11,7 +11,9 @@ int main() {
     int b = 66;
     cout << b << endl;
     cout << (char) b << endl;
-    
+    // check sum_ascii
+    cout << sum_ascii("bob") << endl;
+    cout << sum_ascii("110");
 
     return 0;
 }
@@ -21,7 +23,7 @@ int sum_ascii(string key) {
     for(char val: key) {
         sum += val;
     }
-    return sum
+    return sum;
 }
 
 /* 
