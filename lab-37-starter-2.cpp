@@ -16,7 +16,7 @@ int main() {
     cout << sum_ascii("bob") << endl;
     cout << sum_ascii("110") << endl;
 
-    ifstream file("lab-37-data-2.txt"); 
+    ifstream file("lab-37-data-2.txt");  
 
     string line;
     int sum = 0;
