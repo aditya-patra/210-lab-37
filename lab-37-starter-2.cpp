@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 int sum_ascii(string key);
@@ -14,6 +15,13 @@ int main() {
     // check sum_ascii
     cout << sum_ascii("bob") << endl;
     cout << sum_ascii("110");
+
+    ifstream file("lab-37-data-2.txt");
+
+    string line;
+    while (getline(line, file)) {
+        cout line;
+    }
 
     return 0;
 }
