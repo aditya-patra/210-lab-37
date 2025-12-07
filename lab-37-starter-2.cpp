@@ -26,14 +26,14 @@ int main() {
         auto it = hash_table.find(gen_hash_index(line));
         if (it == hash_table.end()) {
             list<string> temp;
-            temp.push_back(line);
+            temp.push_front(line);
+            cout << *temp.begin() << endl;
             hash_table.insert(make_pair(gen_hash_index(line), temp));
         }
         else {
             it->second.push_front(line);
         }
     }
-    cout << *temp.begin();
     // menu printing Lab 38
     int input = -1;
     while (true) {
