@@ -99,7 +99,7 @@ int main() {
             cin >> key;
             auto it = hash_table.find(gen_hash_index(key));
             if (it == hash_table.end()) {
-                cout << "Key doesn't exist";
+                cout << "Key not present in hash table" << endl;
             }
             else {
                 bool present = false;
@@ -109,10 +109,7 @@ int main() {
                         break;
                     }
                 }
-                if (present) {
-                    cout << "Key present at hash bin " << hash << endl;
-                }
-                else {
+                if (!present) {
                     cout << "Key not present in hash table" << endl;
                 }
             }
