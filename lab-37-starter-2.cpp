@@ -33,6 +33,11 @@ int main() {
             it->second.push_front(line);
         }
     }
+
+    // menu printing Lab 38
+    int input = -1;
+    while (true) {
+        cout << "Menu: \n  1 - print 100 entries";
     int cnt = 0;
     for (const auto& pair : hash_table) {
         cout << pair.first << endl;
@@ -44,6 +49,7 @@ int main() {
         if (cnt == 100) {
             break;
         }
+    }
     }
 
     return 0;
