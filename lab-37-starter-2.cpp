@@ -61,7 +61,7 @@ int main() {
             int hash = gen_hash_index(key); 
 
         }
-        else if (input == 5) {
+        else if (input == 5) { 
             break;
         }
     }
