@@ -101,6 +101,21 @@ int main() {
             if (it == hash_table.end()) {
                 cout << "Key doesn't exist";
             }
+            else {
+                bool present = false;
+                for(auto index = it->second.begin(); index != it->second.end(); index++) {
+                    if (*index == key) {
+                        present = true; 
+                        break;
+                    }
+                }
+                if (present) {
+                    cout << "Key present at hash bin " << hash << endl;
+                }
+                else {
+                    cout << "Key not present in hash table" << endl;
+                }
+            }
         }
         else if (input == 5) { 
             break;
