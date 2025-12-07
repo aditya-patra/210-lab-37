@@ -88,7 +88,7 @@ int main() {
                 temp.push_back(key);
                 hash_table.insert(make_pair(gen_hash_index(key), temp));
             }
-            else {
+            else { 
                 it->second.push_front(key);
             } 
             cout << "Key added" << endl;
