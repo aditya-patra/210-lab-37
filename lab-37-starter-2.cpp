@@ -122,6 +122,7 @@ int main() {
             auto it = hash_table.find(gen_hash_index(key));
             if (it == hash_table.end()) {
                 cout << "Key not present in hash table" << endl;
+                continue;
             }
             else {
                 bool present = false;
@@ -134,6 +135,7 @@ int main() {
                 }
                 if (!present) {
                     cout << "Key not present in hash table" << endl;
+                    continue; 
                 }
             }
             string key2;
