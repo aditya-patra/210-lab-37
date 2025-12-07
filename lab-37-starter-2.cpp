@@ -26,8 +26,7 @@ int main() {
         auto it = hash_table.find(gen_hash_index(line));
         if (it == hash_table.end()) {
             list<string> temp;
-            temp.push_front(line);
-            cout << *temp.begin() << endl;
+            temp.push_back(line);
             hash_table.insert(make_pair(gen_hash_index(line), temp));
         }
         else {
@@ -102,7 +101,7 @@ int main() {
 }
 
 int gen_hash_index(string key) {
-    int sum = 0;
+    int sum = 0; 
     for(char val: key) {
         sum += (int) val;
     }
