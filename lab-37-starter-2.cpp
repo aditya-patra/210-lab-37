@@ -36,7 +36,7 @@ int main() {
     // menu printing Lab 38
     int input = -1;
     while (true) {
-        cout << "Menu: \n  1 - print 100 entries\n  2 - search for a key\n  5 - Exit\n";
+        cout << "Menu: \n  1 - print 100 entries\n  2 - search for a key\n  3 - add key\n  5 - Exit\n";
         cout << "Enter your choice: ";
         cin >> input;
         if (input == 1) {
@@ -91,6 +91,7 @@ int main() {
             else {
                 it->second.push_front(key);
             } 
+            cout << "Key added" << endl;
         }
         else if (input == 5) { 
             break;
