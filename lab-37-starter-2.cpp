@@ -36,14 +36,17 @@ int main() {
 
     int cnt = 0;
     for (const auto& pair : hash_table) {
-        cout << pair.first;
+        cout << pair.first << endl;
+        /*
         for (auto i = pair.second.begin(); i != pair.second.end(); i++) {
-            cout << *i << endl; 
+            cout << *i << " "; 
         }
+        cout << endl;
         cnt++;
         if (cnt == 100) {
             break;
         }
+            */
     }
 
     return 0;
