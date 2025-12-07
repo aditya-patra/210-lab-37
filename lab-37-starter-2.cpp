@@ -37,19 +37,26 @@ int main() {
     // menu printing Lab 38
     int input = -1;
     while (true) {
-        cout << "Menu: \n  1 - print 100 entries";
-    int cnt = 0;
-    for (const auto& pair : hash_table) {
-        cout << pair.first << endl;
-        for (auto i = pair.second.begin(); i != pair.second.end(); i++) {
-            cout << *i << " "; 
+        cout << "Menu: \n  1 - print 100 entries\n";
+        cout << "Enter your choice: ";
+        cin >> input;
+        if (input == 1) {
+            int cnt = 0;
+            for (const auto& pair : hash_table) {
+                cout << pair.first << endl;
+                for (auto i = pair.second.begin(); i != pair.second.end(); i++) {
+                    cout << *i << " "; 
+                }
+                cout << endl << endl;
+                cnt++;
+                if (cnt == 100) {
+                    break;
+                }
+            }
         }
-        cout << endl << endl;
-        cnt++;
-        if (cnt == 100) {
+        else if (input == 5) {
             break;
         }
-    }
     }
 
     return 0;
