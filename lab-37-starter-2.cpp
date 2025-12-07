@@ -114,7 +114,7 @@ int main() {
                     cout << "Key not present in hash table" << endl;
                 }
             }
-        }
+        } 
         else if (input == 5) { 
             break;
         }
