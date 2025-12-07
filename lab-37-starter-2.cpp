@@ -33,7 +33,7 @@ int main() {
             it->second.push_front(line);
         }
     }
-
+    cout << *temp.begin();
     // menu printing Lab 38
     int input = -1;
     while (true) {
