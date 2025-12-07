@@ -115,8 +115,29 @@ int main() {
                 }
             }
         } 
-        else if (input == 6)
-        else if (input == 5) { 
+        else if (input == 5) {
+            string key;
+            cout << "Enter key value: ";
+            cin >> key;
+            auto it = hash_table.find(gen_hash_index(key));
+            if (it == hash_table.end()) {
+                cout << "Key not present in hash table" << endl;
+            }
+            else {
+                bool present = false;
+                for(auto index = it->second.begin(); index != it->second.end(); index++) {
+                    if (*index == key) {
+                        present = true;
+                        it->second.erase(index);
+                        break;
+                    }
+                }
+                if (!present) {
+                    cout << "Key not present in hash table" << endl;
+                }
+            }
+        }
+        else if (input == 6) { 
             break;
         }
     }
