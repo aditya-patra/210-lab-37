@@ -93,6 +93,15 @@ int main() {
             } 
             cout << "Key added" << endl;
         }
+        else if (input == 4) {
+            string key;
+            cout << "Enter key value: ";
+            cin >> key;
+            auto it = hash_table.find(gen_hash_index(key));
+            if (it == hash_table.end()) {
+                cout << "Key doesn't exist";
+            }
+        }
         else if (input == 5) { 
             break;
         }
