@@ -60,7 +60,7 @@ int gen_hash_index(string key) {
     for(char val: key) {
         sum += (int) val;
     }
-    return sum; 
+    return sum;  
 }
 
 /* 
