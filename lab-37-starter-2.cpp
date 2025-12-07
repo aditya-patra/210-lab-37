@@ -90,7 +90,7 @@ int main() {
             }
             else {
                 it->second.push_front(key);
-            }
+            } 
         }
         else if (input == 5) { 
             break;
