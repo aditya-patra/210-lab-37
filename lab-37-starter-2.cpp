@@ -80,16 +80,18 @@ int main() {
             }
         }
         else if (input == 3) {
-            
-        auto it = hash_table.find(gen_hash_index(line));
-        if (it == hash_table.end()) {
-            list<string> temp;
-            temp.push_back(line);
-            hash_table.insert(make_pair(gen_hash_index(line), temp));
-        }
-        else {
-            it->second.push_front(line);
-        }
+            string key;
+            cout << "Enter key value: ";
+            cin >> key;
+            auto it = hash_table.find(gen_hash_index(key));
+            if (it == hash_table.end()) {
+                list<string> temp;
+                temp.push_back(key);
+                hash_table.insert(make_pair(gen_hash_index(key), temp));
+            }
+            else {
+                it->second.push_front(key);
+            }
         }
         else if (input == 5) { 
             break;
