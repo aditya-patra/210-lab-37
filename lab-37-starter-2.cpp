@@ -33,21 +33,24 @@ int main() {
             it->second.push_front(line);
         }
     }
-
+    int cnt = 0;
+    for (const auto& pair: hash_table) {
+        cnt ++;
+    }
+    cout << cnt;
+    /*
     int cnt = 0;
     for (const auto& pair : hash_table) {
         cout << pair.first << endl;
-        /*
         for (auto i = pair.second.begin(); i != pair.second.end(); i++) {
             cout << *i << " "; 
         }
-        cout << endl;
+        cout << endl << endl;
         cnt++;
         if (cnt == 100) {
             break;
         }
-            */
-    }
+    }*/
 
     return 0;
 }
