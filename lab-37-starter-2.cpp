@@ -109,7 +109,7 @@ int main() {
                         it->second.erase(index);
                         break;
                     }
-                }
+                } 
                 if (!present) {
                     cout << "Key not present in hash table" << endl;
                 }
