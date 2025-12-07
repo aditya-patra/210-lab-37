@@ -136,17 +136,17 @@ int main() {
                     cout << "Key not present in hash table" << endl;
                 }
             }
-            string key;
+            string key2;
             cout << "Enter key value: ";
-            cin >> key;
-            auto it = hash_table.find(gen_hash_index(key));
-            if (it == hash_table.end()) {
+            cin >> key2;
+            auto it2 = hash_table.find(gen_hash_index(key2));
+            if (it2 == hash_table.end()) {
                 list<string> temp;
-                temp.push_back(key);
-                hash_table.insert(make_pair(gen_hash_index(key), temp));
+                temp.push_back(key2);
+                hash_table.insert(make_pair(gen_hash_index(key2), temp));
             }
             else { 
-                it->second.push_front(key);
+                it2->second.push_front(key);
             } 
             cout << "Key added" << endl;
         }
