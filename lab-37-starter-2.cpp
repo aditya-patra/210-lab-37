@@ -105,7 +105,8 @@ int main() {
                 bool present = false;
                 for(auto index = it->second.begin(); index != it->second.end(); index++) {
                     if (*index == key) {
-                        present = true; 
+                        present = true;
+                        it->second.erase(index);
                         break;
                     }
                 }
