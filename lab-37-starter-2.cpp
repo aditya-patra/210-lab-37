@@ -58,8 +58,10 @@ int main() {
             string key;
             cout << "Enter key value: ";
             cin >> key;
-            int hash = gen_hash_index(key); 
-
+            int hash = gen_hash_index(key);
+            for(const auto& pair: hash_table) {
+                if 
+            }
         }
         else if (input == 5) { 
             break;
