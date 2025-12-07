@@ -37,7 +37,7 @@ int main() {
     // menu printing Lab 38
     int input = -1;
     while (true) {
-        cout << "Menu: \n  1 - print 100 entries\n  2 - search for a key\n  5 - Exit";
+        cout << "Menu: \n  1 - print 100 entries\n  2 - search for a key\n  5 - Exit\n";
         cout << "Enter your choice: ";
         cin >> input;
         if (input == 1) {
